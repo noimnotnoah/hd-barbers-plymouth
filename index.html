@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H&amp;D Barbers | Devonport Plymouth</title>
+<meta name="description" content="H&amp;D Barbers in Devonport, Plymouth. Fresh fades, modern cuts, and beard styling. Walk-ins welcome.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600&display=swap');
+:root { --orange: #e85d26; --dark-orange: #c44a1a; --charcoal: #1a1a2e; --medium-charcoal: #2a2a3e; --light-charcoal: #3a3a4e; --white: #f0f0f5; --accent: #ff7a40; }
+body { font-family: 'Inter', sans-serif; background: var(--charcoal); color: var(--white); }
+h1,h2,h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
+.hero {
+  background: linear-gradient(135deg, var(--charcoal) 0%, var(--medium-charcoal) 50%, var(--charcoal) 100%);
+  color: var(--white); padding: 100px 20px 80px; text-align: center; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(232,93,38,0.03) 20px, rgba(232,93,38,0.03) 40px);
+  animation: drift 20s linear infinite;
+}
+@keyframes drift { from { transform: translate(0,0); } to { transform: translate(50px,50px); } }
+.hero h1 { font-size: 4em; color: var(--orange); text-shadow: 0 0 30px rgba(232,93,38,0.3); letter-spacing: 4px; position: relative; }
+.hero .subtitle { font-size: 1.3em; color: #8888aa; letter-spacing: 6px; text-transform: uppercase; margin-top: 5px; position: relative; }
+.hero .tagline { margin: 20px 0; font-size: 1.05em; color: #9999bb; position: relative; }
+.hero .cta {
+  display: inline-block; background: var(--orange); color: var(--charcoal); padding: 14px 40px;
+  text-decoration: none; font-weight: 700; transition: .3s; letter-spacing: 2px; position: relative; text-transform: uppercase;
+}
+.hero .cta:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 25px rgba(232,93,38,0.3); }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 70px 0; }
+.section h2 { text-align: center; font-size: 2.5em; color: var(--orange); margin-bottom: 50px; }
+.section h2::after { content: ''; display: block; width: 80px; height: 3px; background: var(--orange); margin: 10px auto 0; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 20px; }
+.service-card {
+  background: var(--medium-charcoal); padding: 30px 20px; text-align: center;
+  border-bottom: 3px solid var(--orange); transition: .3s;
+}
+.service-card:hover { background: var(--light-charcoal); transform: translateY(-3px); }
+.service-card h3 { color: var(--white); font-size: 1.3em; }
+.service-card .price { color: var(--orange); font-size: 1.5em; font-weight: 700; margin: 10px 0; }
+.service-card p { color: #8888aa; }
+.gallery { background: var(--medium-charcoal); }
+.gallery h2 { color: var(--white); }
+.gallery h2::after { background: var(--orange); }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 15px; }
+.gallery-item {
+  aspect-ratio: 1; background: var(--light-charcoal); display: flex; align-items: center; justify-content: center;
+  font-size: 2.5em; border-radius: 4px; transition: .3s;
+}
+.gallery-item:hover { background: var(--orange); transform: scale(1.02); }
+.about-charcoal { background: var(--charcoal); }
+.about-charcoal h2 { color: var(--orange); }
+.about-text { max-width: 750px; margin: 0 auto; text-align: center; font-size: 1.05em; color: #9999bb; line-height: 1.8; }
+.contact { background: var(--medium-charcoal); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.contact-info p { margin: 14px 0; font-size: 1em; }
+.contact-info strong { color: var(--orange); }
+.contact-info a { color: var(--orange); text-decoration: none; }
+.contact-info a:hover { text-decoration: underline; }
+.hours-box { background: var(--charcoal); padding: 20px; border-radius: 4px; }
+.hours-box p { margin: 6px 0; color: #9999bb; }
+.hours-box .day { color: var(--white); }
+footer {
+  background: var(--charcoal); color: #555570; text-align: center; padding: 30px 20px;
+  font-size: 0.9em; border-top: 1px solid var(--light-charcoal);
+}
+footer a { color: var(--orange); text-decoration: none; }
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5em; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>H&amp;D Barbers</h1>
+  <p class="subtitle">Devonport • Plymouth</p>
+  <p class="tagline">Fresh fades • Modern cuts • Sharp styles</p>
+  <a href="#contact" class="cta">Walk In Today</a>
+</header>
+
+<section class="section" id="services">
+  <div class="container">
+    <h2>Price List</h2>
+    <div class="services-grid">
+      <div class="service-card"><h3>💇 Fresh Fade</h3><p>Skin fade, taper or drop</p><p class="price">£17</p></div>
+      <div class="service-card"><h3>✂️ Cut &amp; Style</h3><p>Scissor cut &amp; product</p><p class="price">£15</p></div>
+      <div class="service-card"><h3>🧔 Beard Line-Up</h3><p>Shape &amp; detail</p><p class="price">£10</p></div>
+      <div class="service-card"><h3>🔥 Full Groom</h3><p>Cut, beard &amp; finish</p><p class="price">£24</p></div>
+      <div class="service-card"><h3>👦 Junior Cut</h3><p>Under 12</p><p class="price">£11</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section about-charcoal" id="about">
+  <div class="container">
+    <h2>About H&amp;D</h2>
+    <div class="about-text">
+      <p>H&amp;D Barbers is Devonport's go-to for fresh cuts and modern barbering. Whether you need a clean skin fade, a sharp scissor cut, or a beard line-up that turns heads — we've got you. Our team stays current with the latest styles and techniques so you always walk out looking your best.</p>
+      <p style="margin-top:15px;">Walk-ins welcome. No fuss, just fresh.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery" id="gallery">
+  <div class="container">
+    <h2>Our Work</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">💈</div>
+      <div class="gallery-item">✂️</div>
+      <div class="gallery-item">🧔</div>
+      <div class="gallery-item">🔥</div>
+      <div class="gallery-item">⚡</div>
+      <div class="gallery-item">💯</div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <h2>Find Us</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>📍 Address:</strong> Devonport, Plymouth</p>
+        <p><strong>📞 Phone:</strong> <a href="tel:+441752000003">01752 000003</a></p>
+        <p><strong>✉️ Email:</strong> <a href="mailto:hdbarbers@hotmail.com">hdbarbers@hotmail.com</a></p>
+        <div class="hours-box">
+          <p><span class="day">Mon–Fri:</span> 9am – 6pm</p>
+          <p><span class="day">Saturday:</span> 8am – 5pm</p>
+          <p><span class="day">Sunday:</span> Closed</p>
+        </div>
+      </div>
+      <div style="background:var(--light-charcoal);min-height:220px;display:flex;align-items:center;justify-content:center;color:#6666aa;font-size:1.2em;">
+        🗺️ Devonport High Street
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 H&amp;D Barbers, Devonport, Plymouth</p>
+  <p>📧 <a href="mailto:hdbarbers@hotmail.com">hdbarbers@hotmail.com</a></p>
+</footer>
+</body>
+</html>
